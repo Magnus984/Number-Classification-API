@@ -7,13 +7,10 @@ class ClassifyNumber(Resource):
     def get(self):
         try:
             number = request.args.get('number')
-            print(number)
             if number is None:
                 return {"number": None, "error": True }, 400
             number = int(number)
-            print(number)
             response = requests.get(f"http://numbersapi.com/{number}/math") # Make request to Numbers API
-            print(response.text)
             if response.status_code == 200:
                 properties = []
                 if is_armstrong.is_armstrong(number):
