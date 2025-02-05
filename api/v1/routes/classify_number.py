@@ -11,6 +11,8 @@ class ClassifyNumber(Resource):
             parser.add_argument('number', type=int, location="args")
             args = parser.parse_args()
             number = args['number']
+            if number is None:
+                raise werkzeug.exceptions.BadRequest
             response = requests.get(f"http://numbersapi.com/{number}/math") # Make request to Numbers API
             if response.status_code == 200:
                 properties = []

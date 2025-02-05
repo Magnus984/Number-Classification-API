@@ -29,7 +29,9 @@ An API that takes a number and returns interesting mathematical properties about
 
 5. Open your browser or API client and visit:
 
-    ```http://127.0.0.1:5000//api/classify-number```
+    ```http://127.0.0.1:5000/api/classify-number```
+
+    **note** : This is the base URL hence no response will be returned or you will get a bad request
 
 ## API Endpoints
 
