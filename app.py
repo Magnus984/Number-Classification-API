@@ -5,7 +5,6 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
-app.json.sort_keys = False
 api = Api(app)
 api.add_resource(ClassifyNumber, '/api/classify-number')
 

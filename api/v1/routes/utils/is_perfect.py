@@ -5,6 +5,7 @@ def is_perfect(n: int) -> bool:
     :param n: The number to check.
     :return: True if the number is perfect, False otherwise.
     """
+    n = abs(n)
     if n < 2:
         return False
 
